@@ -21,7 +21,10 @@
       </li>
     </ul>
 
-    
+    <form class="form-horizontal">
+      <input type="text" ng-model="todoCtrl.formTodoText" ng-model-repeat>
+      <button class="btn" ng-click="todoCtrl.addTodo()"><i class="icon-plus"></i>Add Todo</button>
+    </form>
   </div>
 </body>
 </html>
