@@ -13,4 +13,10 @@ angular.module('todos', [])
       this.todos.push({text:this.formTodoText, done:false});
       this.formTodoText = '';
     };
+
+    this.clearCompleted = function() {
+      this.todos = this.todos.filter(function(todo) {
+        return !todo.done;
+      });
+    };
   });
