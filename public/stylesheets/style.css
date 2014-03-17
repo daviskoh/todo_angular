@@ -1,3 +1,14 @@
+h1, p {
+  text-align: center;
+}
+
+.todoCtrl {
+  padding: 0% 5% 0% 5%;
+  border: 2px solid black;
+  width: 50%;
+  margin: 0 auto;
+}
+
 .unstyled {
   list-style: none;
 }

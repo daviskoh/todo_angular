@@ -16,11 +16,14 @@
   <script src='public/javascripts/todos.js' type='text/javascript'></script>
 </head>
 <body>
+  <h1>Hello World! (and CrowdSurge)</h1>
+  <p>Here is my 1st AngularJS app</p>
+
   <!-- instantiate new TodoController scoped to var todoCtrl -->
-  <div ng-controller="TodoController as todoCtrl">
+  <div class="todoCtrl" ng-controller="TodoController as todoCtrl">
     <!-- {{}} is scopepd within current context -->
     <!-- call function below when statement is reached -->
-    <h1>All Todos: {{todoCtrl.getTotalTodos()}}</h1>
+    <h2>All Todos: {{todoCtrl.getTotalTodos()}}</h2>
 
     <ul class='unstyled'>
       <!-- create following li for each todo -->
