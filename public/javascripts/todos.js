@@ -1,10 +1,10 @@
 // declare var incase there is need for more controllers later
-var todoApp = angular.module('todos', []);
+angular.module('todos', []);
 
-todoApp.controller('TodoController', function() {
+angular.module('todos').controller('TodoController', function() {
   this.todos = [
-    {text:'task 1', done:false},
-    {text:'task 2', done:false}
+    {text:'task 1', done:false, priority: 'low'},
+    {text:'task 2', done:false, priority: 'low'}
   ];
 
   this.getTotalTodos = function() {
@@ -20,10 +20,11 @@ todoApp.controller('TodoController', function() {
   this.addTodo = function() {
     if (!this.todoExist(this.formTodoText)) {
       console.log('adding: %s', this.formTodoText);
-      this.todos.push({text:this.formTodoText, done:false});
+      this.todos.push({text:this.formTodoText, done:false, priority: this.priority});
     };
     
     this.formTodoText = '';
+    this.priority = '';
   };
 
   this.clearCompleted = function() {
@@ -34,3 +35,4 @@ todoApp.controller('TodoController', function() {
     });
   };
 });
+
